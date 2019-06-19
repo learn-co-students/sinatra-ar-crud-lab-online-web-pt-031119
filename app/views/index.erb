@@ -1,0 +1,7 @@
+<% @articles.each_with_index do |article, i| %>
+    <h2>Article <%= i+1 %>: </h2>
+    <p>Title: <%= article.title %>
+    <br>
+    Content: <%= article.content %></p>
+    <br>
+<% end %>
