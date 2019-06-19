@@ -20,8 +20,11 @@ class ApplicationController < Sinatra::Base
       Article.create(article)
     end
 
-    @articles = Article.all 
-    binding.pry
+    @articles = Article.all
+    erb :index
+  end
+
+  get '/articles' do
     erb :index
   end
 end
