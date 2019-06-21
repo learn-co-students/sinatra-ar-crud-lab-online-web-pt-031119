@@ -12,7 +12,12 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles/new' do
-    new.erb
+    erb :new
+  end
 
+  post '/articles/new' do
+    raise params.inspect
+    erb :index
+    
   end
 end
