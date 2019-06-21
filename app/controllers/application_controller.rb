@@ -1,6 +1,6 @@
 
 require_relative '../../config/environment'
-
+require 'pry'
 class ApplicationController < Sinatra::Base
 
   configure do
@@ -9,5 +9,10 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
+  end
+
+  get '/articles/new' do
+    new.erb
+
   end
 end
