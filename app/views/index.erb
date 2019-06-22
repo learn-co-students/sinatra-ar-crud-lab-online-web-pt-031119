@@ -1,0 +1,9 @@
+<div style="margin-left: 30%; padding-top: 5%">
+  <h2><% @articles.each do |article| %></h2>
+    <h3><a href="/articles/<%= article.id %>"><%= article.title %></a></h3>
+  <% end %>
+
+  <form action="/articles/new">
+    <input type="submit" value="New"/>
+  </form>
+</div>

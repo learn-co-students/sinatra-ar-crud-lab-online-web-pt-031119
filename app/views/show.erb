@@ -1,0 +1,20 @@
+<div style="margin-left: 30%; padding-top: 5%">
+  <h2><%= @article.title %></h2>
+  <p style="box-sizing: content-box; width: 25%; border: solid #D3D3D3 1px; padding 15px;"><%= @article.content %></p>
+  <br><br>
+  <form action="/articles/<%= @article.id %>" method="post">
+    <input type="hidden" name="_method" value="delete" />
+    <input type="submit" value="Delete"/>
+  </form>
+
+  <button><a href="/articles/<%= @article.id %>/edit" style="text-decoration: none">Edit</button>
+
+  <!-- <form action="/articles/<%= @article.id %>" method='post'>
+    <input type="submit" value="Edit"/>
+  </form>
+
+  <form action="/articles">
+    <input type="submit" value="Go Back"/>
+  </form> -->
+
+</div>
