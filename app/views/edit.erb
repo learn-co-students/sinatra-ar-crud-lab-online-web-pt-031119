@@ -1,0 +1,12 @@
+<div style="margin-left: 30%; padding-top: 5%">
+  <form action="/articles/<%= @article.id %>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <label for="request"> Title </label><br>
+    <input type="text" id="title" name="article[title]" value="<%= @article.title %>"><br><br>
+    <label for="request"> Content </label><br>
+
+    <input style="box-sizing: content-box; width: 25%; border: height: 100px; solid #D3D3D3 1px; padding 15px" type="text" id="content" name="article[content]" value="<%= @article.content %>"><br>
+    <br><br>
+    <input type="submit" value="submit">
+  </form>
+</div>
