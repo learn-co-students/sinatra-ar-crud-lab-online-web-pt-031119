@@ -32,7 +32,7 @@ end
 get "/articles/:id" do #show
   #binding.pry
   @article = Article.find_by_id(params[:id])
-  
+  #binding.pry
   erb :show
 end
 
@@ -41,5 +41,16 @@ get '/articles/:id/edit' do
    erb :edit
 end
 
+patch "/articles/:id"  do #update
+
+  @article = Article.find(params[:id])
+  @article.update(params[:article])
+  redirect to "/articles/#{article.id}"
+end
+
+delete "/articles/:id" do #delete
+  Article.destroy(params[:id])
+ redirect to "/articles"
+end
 
 end

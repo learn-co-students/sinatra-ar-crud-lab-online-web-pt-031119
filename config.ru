@@ -14,4 +14,4 @@ rescue ActiveRecord::PendingMigrationError => err
   exit 1
 end
 
-#use Rack::MethodOverride
+use Rack::MethodOverride
