@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <% @articles.each do |article| %>
+      <a href="/articles/<%= article.id %>">
+        <%= article.title %>
+      </a>
+  <% end %>
+</body>
+</html>
